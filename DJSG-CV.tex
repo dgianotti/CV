@@ -1,0 +1,181 @@
+%------------------------------------
+% Forked from Dario Taraborelli:
+% http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Daniel J. Short Gianotti - vita},
+	pdfauthor={Daniel J. Short Gianotti},
+	pdfproducer={http://github.com/dgianotti/CV}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Daniel J. Short Gianotti}\\[1cm]
+Department of Earth \& Environment\\
+Boston University\\
+685 Commonwealth Avenue\\
+Boston, MA \texttt{02215}
+U.S.A.\\[.2cm]
+Phone: \texttt{(206) 914-8269}\\
+email: \href{mailto:gianotti@bu.edu}{gianotti@bu.edu}\\
+\textsc{url}: \href{http://people.bu.edu/gianotti}{http://people.bu.edu/gianotti/}\\ 
+%\vfill
+
+%%\hrule
+\section*{Current position}
+\emph{PhD Student}, Boston University, Boston
+
+%%\hrule
+\section*{Areas of specialization}
+Hydroclimatology $\cdot$ Ecohydrology $\cdot$ Preciptation Predictability \\
+Stochastic Modeling $\cdot$ Statistical Representations of Variability
+
+%%\hrule
+\section*{Appointments held}
+\noindent
+\years{2011-2015}Research Assistant, Boston University\\
+\years{2011}Math Teacher, Boston Public Schools\\
+\years{2004-2010}Private Tutor, Anchorage \& Los Angeles\\
+\years{2007-2008}Lab Technician, California Institute of Technology\\
+\years{2005-2006}Engineering Associate, GV Jones \& Associates\\
+\years{2004-2005}Research Assistant, University of Alaska, Anchorage\\
+\years{2003-2005}Substitute Teacher, Anchorage School District\\
+\years{2004}Staff, National Youth Science Camp\\
+\years{2001-2003}Writing Consultant, Harvey Mudd College\\
+\years{2002}Research Assistant, Lawrence Berkeley National Lab
+
+
+%\hrule
+\section*{Education}
+\noindent
+\years{In Progress}\textsc{PhD} in Geography and Environment, Boston University\\
+%\years{2003-2005}Coursework in Environmental Science and Engineering, University of Alaska, Anchorage\\
+\years{2003}\textsc{BS} in Mathematics, Harvey Mudd College
+
+%\hrule
+%\section*{Grants, honors \& awards}
+%\noindent
+%\years{1921}Nobel Prize in Physics, Nobel Foundation
+
+\section*{Publications \& talks}
+
+\subsection*{Journal articles}
+\noindent
+\years{2013}D Gianotti, BT Anderson, GD Salvucci (2013), ``What Do Rain Gauges Tell Us about the Limits of Precipitation Predictability?'' Journal of Climate 26 (15), 5682-5688.\\
+\years{2013}I Pal, BT Anderson, GD Salvucci, DJ Gianotti (2013), ``Shifting seasonality and increasing frequency of precipitation in wet and dry seasons across the US,'' Geophysical Research Letters 40 (15), 4030-4035.\\
+\years{2015}BT Anderson, D Gianotti, G Salvucci (2015), ``Characterizing the potential predictability of seasonal, station-based heavy precipitation accumulations and extreme dry-spell durations,'' Journal of Hydrometeorology.\\
+\years{2014}DJ Short Gianotti, BT Anderson, GD Salvucci (2014), ``The Potential Predictability of Precipitation Occurrence, Intensity, and Seasonal Totals over the Continental United States,'' Journal of Climate 27 (18), 6904-6918.\\
+\years{2012}I Pal, BT Anderson, G Salvucci, D Gianotti (2012), ``Magnitude and significance of observed trends in precipitation frequency over the US,'' AGU Fall Meeting Abstracts 1, 1018.\\
+\years{2011}D Gianotti, BT Anderson, G Salvucci (2011), ``Stochastic and deterministic aspects of observed seasonal-mean precipitation variations and extreme event occurrences over the United States,'' AGU Fall Meeting Abstracts 1, 1679.
+\years{2015}TBGS\\
+\years{2015}Bruce Trends, Extremes
+
+\subsection*{Conference presentations}
+\noindent
+\years{2015}Dan Chapman\\
+\years{2014}Dan AGU\\
+\years{2014}Guido AGU\\
+\years{2014}M Dietze AGU\\
+\years{2014}M Dietze ESA\\
+\years{2011}Dan AGU\\
+\years{2012}Dan CDPW\\
+\years{2013}Dan CDPW\\
+\years{}Indrani AGU\\
+\years{}Indrani CDPW\\
+\years{}Bruce AMS?\\
+\years{}Dan Schubert Finland
+
+\subsection*{Non-refereed research documents}
+\noindent
+\years{}Engineering reports
+\years{2003}Gianotti, Daniel J (2003), ``Fluid drop coalescence in a Hele-Shaw Cell'', Undergraduate Mathematics Thesis, Advised by A. Nadim, \emph{Harvey Mudd College}.\\
+\years{2002}Lampe, K., Hultman, K., Hedstrom, K., Gianotti, D., Deyo, E., \& Seat, R. (2002), ``Internal metrology for the Space Interferometry Mission'', Undergraduate Physics Clinic Repot, Advised by R. Haskell, D. MacDonald, \& B. Nemati, \emph{Harvey Mudd College \& NASA-JPL}.\\
+
+\subsection*{Non-conference presentations}
+\years{2015}Dan EE student presentations
+\years{2014}Dan EE Student Presentations (CA Drought)\\
+\years{}Dan GE Student Presentation (PP)\\
+
+%\section*{Teaching}
+
+%\hrule
+\section*{Professional service}
+
+\subsection*{Journal reviews}
+Hydrology and Earth System Sciences
+
+\subsection*{Memberships}
+American Geophysical Union
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+%\fontspec{Times New Roman}
+\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{http://www.github.com/dgianotti/CV}{http://www.github.com/dgianotti/CV}}
+\end{center}
+
+\end{document}
