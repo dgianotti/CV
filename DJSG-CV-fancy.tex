@@ -26,13 +26,12 @@
 %    {\tnr\begin{hangparas}{0.25in}{1}#4\vspace{\parsep}\end{hangparas}}%
 %  }\\\end{entrylist}}
 
-
 \newcommand{\lpdentry}[4]{\begin{entrylist}%
    #1&\begin{minipage}[t]{11.8cm}%
    \begin{minipage}[t]{11.8cm-0.4cm-\widthof{\begin{varwidth}{4cm} \footnotesize#3 \strut\end{varwidth}}
 }\strut \raggedright\textbf{#2} \strut\end{minipage}\hfill\begin{varwidth}[t]{4cm} \footnotesize\addfontfeature{Color=lightgray}\begin{flushright}#3 \strut\end{flushright}\end{varwidth}\vspace{0.6\parsep}
   
-    {\begin{hangparas}{0.25in}{1} #4\vspace{3\parsep}\end{hangparas}}%
+    {\tnr\begin{hangparas}{0.25in}{1} #4\vspace{3\parsep}\end{hangparas}}%
   \end{minipage}\\\end{entrylist}}
   
 
