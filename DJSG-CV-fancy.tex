@@ -4,6 +4,10 @@
 \usepackage[none]{hyphenat}
 \usepackage{csquotes}
 \usepackage{hanging}
+\usepackage{varwidth}
+\usepackage{calc}
+
+\newfontfamily\tnr{Times New Roman}
 
 % The entry list environment doesn't break across pages, so I'm going to define the entries within an entry list as all idividual entry lists:
 \newcommand{\dentry}[4]{\begin{entrylist}\entry{#1}{#2}{#3}{#4}\end{entrylist}}
@@ -15,12 +19,22 @@
 %\newcommand{\lpdentry}[4]{\begin{entrylist}#1&\parbox[t]{11.8cm}{%
 %	\parbox[t]{7cm}{\strut#2 \strut}\hfill\parbox[t]{4cm}{\footnotesize\addfontfeature{Color=lightgray}\strut\begin{flushright}#3\end{flushright} \strut}%
 %	\\{\begin{hangparas}{0.25in}{1}#4\end{hangparas}}\vspace{\parsep}}\\\end{entrylist}}
+%\newcommand{\lpdentry}[4]{\begin{entrylist}%
+%  #1&\parbox[t]{11.8cm}{%
+%  \parbox[t]{7.5cm}{\raggedright\textbf{#2}}\hfill\parbox[t]{4cm}{\footnotesize\addfontfeature{Color=lightgray}\begin{flushright}#3\end{flushright}}\\
+%  
+%    {\tnr\begin{hangparas}{0.25in}{1}#4\vspace{\parsep}\end{hangparas}}%
+%  }\\\end{entrylist}}
+
+
 \newcommand{\lpdentry}[4]{\begin{entrylist}%
-  #1&\parbox[t]{11.8cm}{%
-  \parbox[t]{7.5cm}{\raggedright\textbf{#2}}\hfill\parbox[t]{4cm}{\footnotesize\addfontfeature{Color=lightgray}\begin{flushright}#3\end{flushright}}\\
+   #1&\begin{minipage}[t]{11.8cm}%
+   \begin{minipage}[t]{11.8cm-0.4cm-\widthof{\begin{varwidth}{4cm} \footnotesize#3 \strut\end{varwidth}}
+}\strut \raggedright\textbf{#2} \strut\end{minipage}\hfill\begin{varwidth}[t]{4cm} \footnotesize\addfontfeature{Color=lightgray}\begin{flushright}#3 \strut\end{flushright}\end{varwidth}\vspace{0.6\parsep}
   
-    {\begin{hangparas}{0.25in}{1}#4\vspace{\parsep}\end{hangparas}}%
-  }\\\end{entrylist}}
+    {\begin{hangparas}{0.25in}{1} #4\vspace{3\parsep}\end{hangparas}}%
+  \end{minipage}\\\end{entrylist}}
+  
 
 %% Also make a 2-argument pub entry command for citations:
 \newcommand{\pubentry}[2]{\begin{entrylist}%
@@ -33,13 +47,16 @@
 
 \begin{document}
 \header{Daniel}{ShortGianotti}
-       {water, energy, carbon, weather, \& climate}
+       {water, energy, carbon, weather \& climate}
 
 
 
 % In the aside, each new line forces a line break
 \begin{aside}
-	\section{about}
+	\section{contact}
+		Parsons Laboratory
+		15 Vassar St.
+		MIT Building 48
  		Cambridge, MA
 	  	United States
   		~
@@ -719,23 +736,23 @@
 
 \section{teaching}
 \subsection{Teaching Fellow:}
-	\dentry
+	\lpdentry
 		{2015}
-		{\emph{Introduction to Quantitative Environmental Modeling}} 
+		{Introduction to Quantitative Environmental Modeling}
 		{Boston University}
 		{}
 
 \subsection{Guest Lecturer:}
-	\dentry
+	\lpdentry
 		{2016-2018}
-		{\emph{Introduction to Hydrology and Water Resources}}
+		{Introduction to Hydrology and Water Resources}
 		{Massachusetts Institute of Technology}
 		{}
-	\dentry
+	\lpdentry
 		{2017}
-		{\emph{Introduction to Hydrologic Modeling}}
+		{Introduction to Hydrologic Modeling}
 		{Massachusetts Institute of Technology}
-		{Massachusetts Institute of Technology}
+		{}
 		{}
 
 \subsection{K-12 Instruction:}
@@ -774,8 +791,8 @@
 		{2018-2019} 
 		{Apisada (Ju) Chulakadabba}
 		{MIT Civil \& Environmental Engineering}
-		{Undergraduate Senior Thesis Title: \emph{Integration of Satellite and In-situ Data for the 
-		Study of Vegetation Responses to Precipitation Pulses in the Southwestern United States } }
+		{\emph{Integration of Satellite and In-situ Data for the Study of Vegetation Responses to Precipitation 
+		Pulses in the Southwestern United States } }
 
 \subsection{First-year Mini-UROP:}
 	\dentry
@@ -815,5 +832,12 @@ American Geophysical Union\\ % 2011-present
 Boston Water Group\\ % 2014-present
 Boston Area Hydrology Journal Club\\ % 2012-present
 Harvard Plants \& Climate
+
+\vfill{}
+
+\begin{flushright}
+{\scriptsize  Last updated: \today \\
+Latest CV version available at: \href{http://www.github.com/dgianotti/CV}{http://www.github.com/dgianotti/CV}}
+\end{flushright}
 
 \end{document}
