@@ -1,0 +1,819 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+
+\usepackage[none]{hyphenat}
+\usepackage{csquotes}
+\usepackage{hanging}
+
+% The entry list environment doesn't break across pages, so I'm going to define the entries within an entry list as all idividual entry lists:
+\newcommand{\dentry}[4]{\begin{entrylist}\entry{#1}{#2}{#3}{#4}\end{entrylist}}
+% Make the last argument hanging:
+\newcommand{\pdentry}[4]{\begin{entrylist}\entry{#1}{#2}{#3}{\begin{hangparas}{1cm}{1}#4\end{hangparas}}\end{entrylist}}
+
+\newcommand{\ldentry}[4]{\begin{entrylist}\entry{#1}{\parbox[t]{7cm}{\strut#2 \strut}}{\hfill\parbox[t]{4cm}{\strut\begin{flushright}#3\end{flushright} \strut}}{#4}\end{entrylist}}
+
+%\newcommand{\lpdentry}[4]{\begin{entrylist}#1&\parbox[t]{11.8cm}{%
+%	\parbox[t]{7cm}{\strut#2 \strut}\hfill\parbox[t]{4cm}{\footnotesize\addfontfeature{Color=lightgray}\strut\begin{flushright}#3\end{flushright} \strut}%
+%	\\{\begin{hangparas}{0.25in}{1}#4\end{hangparas}}\vspace{\parsep}}\\\end{entrylist}}
+\newcommand{\lpdentry}[4]{\begin{entrylist}%
+  #1&\parbox[t]{11.8cm}{%
+  \parbox[t]{7.5cm}{\raggedright\textbf{#2}}\hfill\parbox[t]{4cm}{\footnotesize\addfontfeature{Color=lightgray}\begin{flushright}#3\end{flushright}}\\
+  
+    {\begin{hangparas}{0.25in}{1}#4\vspace{\parsep}\end{hangparas}}%
+  }\\\end{entrylist}}
+
+%% Also make a 2-argument pub entry command for citations:
+\newcommand{\pubentry}[2]{\begin{entrylist}%
+  #1&\parbox[t]{11.8cm}{%
+    \begin{hangparas}{0.25in}{1}#2\vspace{\parsep}\end{hangparas}%
+  }\\\end{entrylist}}
+
+\newcommand{\textcl}[1]{\phantom{}{\addfontfeatures{Color=awesome-red}#1}}
+
+
+\begin{document}
+\header{Daniel}{ShortGianotti}
+       {water, energy, carbon, weather, \& climate}
+
+
+
+% In the aside, each new line forces a line break
+\begin{aside}
+	\section{about}
+ 		Cambridge, MA
+	  	United States
+  		~
+	  	\email{gianotti@mit.edu}
+	  	\mobile{206.914.8269}
+	  	\homepage{dgianotti.com}
+	  	\github{dgianotti}
+	  	\linkedin{dgianotti}
+		%  \stackoverflow{1502035}{tycho}
+		%  % \gitlab{tycho01}
+		\twitter{@DanGianotti}
+		%  % \reddit{tycho01}
+		%  % 
+  \section{subjects}
+  	water-energy-carbon cycle coupling
+  	terrestrial climate feedbacks
+  	climate predictability
+  	stochastic methods
+	hydroclimatology
+  	remote sensing
+  	ecohydrology
+  	% 
+\end{aside}
+
+%\address{Parsons Laboratory
+%Massachusetts Institute of Technology
+%15 Vassar St., Building 48 
+%Cambridge, MA \texttt{02139}
+%U.S.A.}
+
+\section{current position}
+	\dentry
+		{2016-Present}
+		{Postdoctoral Associate}
+		{\href{https://cee.mit.edu/}{Massachusetts Institute of Technology}}
+		{Parsons Laboratory, Department of Civil \& Environmental Engineering}
+
+\section{education}
+	\dentry
+		{2011-2016}
+		{\textsc{PhD} in Geography and Environment}
+		{\href{https://www.bu.edu/earth/}{Boston University}}
+		{\textbf{Dissertation Title:} \emph{The Potential Predictability of Precipitation over the Continental United States}\\
+		\textbf{Defense Date:} August 9, 2016\\
+		\textbf{Committee:} Bruce T.\ Anderson (primary advisor), Guido D.\ Salvucci, Michael C.\ Dietze, Dara Entekhabi, \& Anthony C.\ Janetos (chair)}
+	\dentry
+		{1999-2003}
+		{\textsc{BS} in Mathematics}
+		{Harvey Mudd College}{}
+
+\section{publications \& talks}
+	\subsection{Manuscripts in Progress}
+		\lpdentry
+			{\emph{resubmitted}}
+			{Terrestrial evaporation and moisture drainage in a warmer climate}
+			{Geophysical Research Letters}
+			{\textcl{Short Gianotti, DJ}, R Akbar, AF Feldman, GD Salvucci, \& D Enthekabi, ``Terrestrial evaporation and moisture drainage 
+			in a warmer climate,'' \emph{Resubmitted} to Geophysical Research Letters.\\ 
+			Preprint: \url{https://doi.org/10.1002/essoar.10501441.1}}		
+		\lpdentry
+			{\emph{in review}}
+			{Value of chlorophyll fluorescence for quantifying hydrological states and fluxes: Current status and 
+			challenges}
+			{Agricultural and Forest Meteorology}
+			{Jonard, F, S DeCanni\`ere, N Br\"uggemann, P Gentine, \textcl{DJ Short Gianotti}, G Lobet, DG Miralles, C Montzka, BR Pag\'an, 
+			U Rascher, \& H Vereecken ''Value of chlorophyll fluorescence for quantifying hydrological states and fluxes: Current status and 
+			challenges,'' \emph{In review} in Agricultural and Forest Meteorology.}
+		\lpdentry
+			{\emph{in review}}
+			{Global timescales of plant water response to 
+			soil moisture pulses}
+			{New Phytologist}
+			{Feldman, AF, \textcl{DJ Short Gianotti}, AG Konings, P Gentine, \& D Entekhabi, ``Global timescales of plant water response to 
+			soil moisture pulses,'' In review in New Phytologist.}
+		\lpdentry
+			{\emph{submitted}}
+			{Historical landscape drainage estimates derived from satellite-era hydrological dynamics}
+			{Water Resources Research}
+			{Akbar, R, \textcl{DJ Short Gianotti}, GD Salvucci, \& D Entekhabi, ``Historical landscape drainage estimates derived from 
+			satellite-era hydrological dynamics,'' \emph{Submitted} to Water Resources Research.}
+		\lpdentry
+			{\emph{in prep}}
+			{A kernel\hyp{}auto\hyp{}regressive weather generator for improved 
+			subseasonal\hyp{}to\hyp{}seasonal precipitation statistics}
+			{Water Resources Research}
+			{\textcl{Short Gianotti, DJ}, BT Anderson, \& GD Salvucci, ``A kernel\hyp{}auto\hyp{}regressive weather generator for improved 
+			subseasonal\hyp{}to\hyp{}seasonal precipitation statistics,'' Expected submission in Water Resources Research, February 2020.}
+
+	\subsection{Published Journal Articles}
+		\lpdentry
+			{2019d}
+			{Satellite-based assessment of land surface 
+			energy partitioning-soil moisture relationships and effects of confounding variables}
+			{Water Resources Research}
+			{Feldman, AF, \textcl{DJ Short Gianotti}, I Trigo, GD Salvucci, \& D Entekhabi, ``Satellite-based assessment of land surface 
+			energy partitioning-soil moisture relationships and effects of confounding variables,'' Water Resources Research 55, 
+			10657--10677. \url{https://doi.org/10.1029/2019WR025874}}		
+		\lpdentry
+			{2019c}
+			{Landscape water storage and subsurface 
+			correlation from satellite surface soil moisture and precipitation observations}
+			{Water Resources Research}
+			{\textcl{Short Gianotti, DJ}, GD Salvucci, R Akbar, K McColl, \& D Entekhabi (2019), ``Landscape water storage and subsurface 
+			correlation from satellite surface soil moisture and precipitation observations,'' Water Resources Research 55, 9111--9132. 
+			\url{https://doi.org/10.1029/2019WR025332}}		
+		\lpdentry
+			{2019b}
+			{Mapped hydroclimatology of evapotranspiration and drainage runoff using SMAP brightness temperature observations and 	
+			precipitation information}
+			{Water Resources Research}
+			{Akbar, R, \textcl{DJ Short Gianotti}, GD Salvucci, \& D Entekhabi (2019), ``Mapped hydroclimatology of evapotranspiration and 
+			drainage runoff using SMAP brightness temperature observations and precipitation information,'' Water Resources Research 55, 
+			3391--3413. \url{https://doi.org/10.1029/2018WR024459}}  		
+		\lpdentry
+			{2019a}
+			{Satellite and station observations demonstrate 
+			water availability's effect on continental-scale evaporative and photosynthetic land surface dynamics}
+			{Water Resources Research}
+			{\textcl{Short Gianotti, DJ}, AJ Rigden, GD Salvucci, \& D Entekhabi (2019), ``Satellite and station observations demonstrate 
+			water availability's effect on continental-scale evaporative and photosynthetic land surface dynamics,'' Water Resources 
+			Research 55, 540--554. \url{https://doi.org/10.1029/2018WR023726}}		
+		\lpdentry
+			{2018e}
+			{Pulse-response 
+			vegetation water uptake is persistent across biomes}
+			{Nature Plants}
+			{Feldman, AF, \textcl{DJ Short Gianotti}, AG Konings, KA McColl, R Akbar, GD Salvucci, \& D Entekhabi (2018), ``Pulse-response 
+			vegetation water uptake is persistent across biomes,'' Nature Plants 4 (12), 1026--1033. 
+			\url{https://doi.org/10.1038/s41477-018-0304-9}}		
+		\lpdentry
+			{2018d}
+			{Partitioning evapotranspiration over the 
+			continental United States using weather station data}
+			{Geophysical Research Letters}
+			{Rigden, AJ, GD Salvucci, D Entekhabi, \& \textcl{DJ Short Gianotti} (2018), ``Partitioning evapotranspiration over the 
+			continental United States using weather station data,'' Geophysical Research Letters 45 (18), 9605--9613. 
+			\url{https://doi.org/10.1029/2018GL079121}}
+		\lpdentry
+			{2018c}
+			{Estimation of landscape soil 
+			water losses from satellite observations of soil moisture}
+			{Journal of Hydrometeorology}
+			{Akbar, R, \textcl{DJ Short Gianotti}, KA McColl, E Haghighi, GD Salvucci, \& D Entekhabi (2018), ``Estimation of landscape soil 
+			water losses from satellite observations of soil moisture,'' Journal of Hydrometeorology 19 (5), 871--889. 
+			\url{https://doi.org/10.1175/JHM-D-17-0200.1}}
+		\lpdentry
+			{2018b}
+			{Hydrological storage length-
+			scales represented by remote sensing estimates of soil moisture and precipitation}
+			{Water Resources Research}
+			{Akbar, R, \textcl{DJ Short Gianotti}, KA McColl, E Haghighi, GD Salvucci, \& D Entekhabi (2018), ``Hydrological storage length-
+			scales represented by remote sensing estimates of soil moisture and precipitation,'' Water Resources Research 54 (3), 
+			1476--1492. \url{ https://doi.org/10.1002/2017WR021508}}
+		\lpdentry
+			{2018a}
+			{Soil and atmospheric controls on the 
+			land surface energy balance: A generalized framework for distinguishing moisture- and energy-limited evaporation regimes}
+			{Water Resources Research}
+			{Haighighi, E, \textcl{DJ Short Gianotti}, R Akbar, GD Salvucci, \& D Entekhabi (2018), ``Soil and atmospheric controls on the 
+			land surface energy balance: A generalized framework for distinguishing moisture- and energy-limited evaporation regimes,'' 
+			Water Resources Research 53 (3), 1831--1851. \url{https://doi.org/10.1002/2017WR021729}}
+		\lpdentry
+			{2017b}
+			{Global characterization of 
+			surface soil moisture drydowns}
+			{Geophysical Research Letters}
+			{McColl, K, W Wang, B Peng, R Akbar, \textcl{D Short Gianotti}, M Pan, \& D Entekhabi (2017), ``Global characterization of 
+			surface soil moisture drydowns,'' Geophysical Research Letters 44 (8), 3682--3690. \url{https://doi.org/10.1002/2017GL072819}}
+		\lpdentry
+			{2017a}
+			{Tracking the Pacific Decadal Precession}
+			{Journal 
+			of Geophysical Research: Atmospheres}
+			{Anderson, BT, JC Furtado, E Di Lorenzo, \textcl{DJ Short Gianotti} (2017), ``Tracking the Pacific Decadal Precession,'' Journal 
+			of Geophysical Research: Atmospheres 122 (6) 3214--3227. \url{https://doi.org/10.1002/2016JD025962}}
+		\lpdentry
+			{2016b}
+			{Dominant timescales of potentially predictable 
+			precipitation variations across the continental United States}
+			{Journal of Climate}
+			{Anderson, BT, \textcl{DJ Short Gianotti}, GD Salvucci, \& J Furtado (2016), ``Dominant timescales of potentially predictable 
+			precipitation variations across the continental United States,'' Journal of Climate 29, 8881--8897. 
+			\url{https://doi.org/10.1175/JCLI-D-15-0635.1}}
+		\lpdentry
+			{2016a}
+			{A decadal precession of atmospheric pressures 
+			over the North Pacific}
+			{Geophysical Research Letters}
+			{Anderson, BT, \textcl{DJ Short Gianotti}, J Furtado, \& E Di Lorenzo (2016), ``A decadal precession of atmospheric pressures 
+			over the North Pacific,'' Geophysical Research Letters 43 (8) 3921--3927. \url{https://doi.org/10.1002/2016GL068206}}
+		\lpdentry
+			{2015c}
+			{Detectability of historical trends in station-based 
+			precipitation characteristics over the continental United States}
+			{Journal of Geophysical Research}
+			{Anderson, BT, \textcl{DJ Short Gianotti}, \& GD Salvucci (2015), ``Detectability of historical trends in station-based 
+			precipitation characteristics over the continental United States,'' Journal of Geophysical Research 120 (10) 4842--4859. 
+			\url{https://doi.org/10.1002/2014JD022960}}
+		\lpdentry
+			{2015b}
+			{Changes in 
+			Autumn Senescence in Northern Hemisphere Deciduous Trees: a Meta-Analysis of Autumn Phenology Studies}
+			{Annals of Botany}
+			{Gill, AL, AS Gallinat, R Sanders-DeMott, AJ Rigden, \textcl{DJ Short Gianotti}, JA Mantooth, \& PH Templer (2015), ``Changes in 
+			Autumn Senescence in Northern Hemisphere Deciduous Trees: a Meta-Analysis of Autumn Phenology Studies,'' Annals of Botany, 
+			(Special Issue on Plants and Climate Change) 116, 875--888. \url{https://doi.org/10.1093/aob/mcv055}}		
+		\lpdentry
+			{2015a}
+			{Characterizing the potential predictability of seasonal, station-
+			based heavy precipitation accumulations and extreme dry-spell durations}
+			{Journal of Hydrometeorology}
+			{Anderson, BT, \textcl{D Gianotti}, \& G Salvucci (2015), ``Characterizing the potential predictability of seasonal, station-
+			based heavy precipitation accumulations and extreme dry-spell durations,'' Journal of Hydrometeorology 16 (2) 843--856. 
+			\url{https://doi.org/10.1175/JHM-D-14-0111.1}}
+		\lpdentry
+			{2014a}
+			{The Potential Predictability of Precipitation Occurrence, 
+			Intensity, and Seasonal Totals over the Continental United States}
+			{Journal of Climate}
+			{\textcl{Short Gianotti, DJ}, BT Anderson, \& GD Salvucci (2014), ``The Potential Predictability of Precipitation Occurrence, 
+			Intensity, and Seasonal Totals over the Continental United States,'' Journal of Climate 27 (18), 6904--6918. 
+			\url{https://doi.org/10.1175/JCLI-D-13-00695.1}}		
+		\lpdentry
+			{2013b}
+			{Shifting seasonality and increasing frequency of 
+			precipitation in wet and dry seasons across the US}
+			{Geophysical Research Letters}
+			{Pal, I, BT Anderson, GD Salvucci, \& \textcl{DJ Gianotti} (2013), ``Shifting seasonality and increasing frequency of 
+			precipitation in wet and dry seasons across the US,'' Geophysical Research Letters 40 (15), 4030--4035. 
+			\url{https://doi.org/10.1002/grl.50760}}
+		\lpdentry
+			{2013a}
+			{What Do Rain Gauges Tell Us about the Limits of Precipitation 
+			Predictability?}
+			{Journal of Climate}
+			{\textcl{Gianotti, D}, BT Anderson, \& GD Salvucci (2013), ``What Do Rain Gauges Tell Us about the Limits of Precipitation 
+			Predictability?'' Journal of Climate 26 (15), 5682--5688. \url{https://doi.org/10.1175/JCLI-D-12-00718.1}}
+
+	\subsection{Conference Presentations}
+		\emph{* denotes presenting author} \\
+		
+		\lpdentry
+			{2019}
+			{Land Surface Fluxes and Hydrologic Sensitivities in a Warmer Climate}
+			{American Geophysical Union Fall Meeting}
+			{\textcl{Short Gianotti, DG}*, R Akbar, AF Feldman, GD Salvucci \& D Entekhabi (2019) ``Land Surface Fluxes and Hydrologic 
+			Sensitivities in a Warmer Climate,'' American Geophysical Union Fall Meeting: H54G-08, San Francisco, CA.} % H54G-08 
+		\lpdentry
+			{2019}
+			{Satellite-based assessment of land surface energy partitioning-soil moisture relationships and effects of confounding 
+			variables}
+			{American Geophysical Union Fall Meeting}
+			{Feldman, AF*, \textcl{DJ Short Gianotti}, IF Trigo, GD Salvucci, \& D Entekhabi (2019) ``Satellite-based assessment of land 
+			surface energy partitioning-soil moisture relationships and effects of confounding variables,'' American Geophysical Union Fall 
+			Meeting: H53F-05, San Francisco, CA.} % H53F-05
+		\lpdentry
+			{2019}
+			{The impact of higher-than-radiometer resolution landscape and weather features on SMAP product}
+			{American Geophysical Union Fall Meeting}
+			{Li, Y*, H Lu, D Entekhabi, \& \textcl{DJ Short Gianotti} (2019) ``The impact of higher-than-radiometer resolution landscape 
+			and weather features on SMAP product,'' American Geophysical Union Fall Meeting: H51S-1771, San Francisco, CA.} % H51S-1771 
+		\lpdentry
+			{2019}
+			{Surface-Subsurface Linkages Derived From SMAP Time Series}
+			{SMAP Science Team Meeting}
+			{\textcl{Short Gianotti, DG}, GD Salvucci, R Akbar, R Cuenca, \& D Entekhabi* (2019) ``Surface-Subsurface Linkages Derived From 
+			SMAP Time Series,'' SMAP Science Team Meeting \#13, Arcadia, CA.} % November 5-6, 2019
+		\lpdentry
+			{2019}
+			{Consequences of the Acceleration of Water Cycle on Surface Water Balance Components Using SMAP Observations}
+			{SMAP Science Team Meeting}
+			{\textcl{Short Gianotti, DG}, R Akbar, AF Feldman, GD Salvucci, \& D Entekhabi* (2019) ``Consequences of the Acceleration of 
+			Water Cycle on Surface Water Balance Components Using SMAP Observations,'' SMAP Science Team Meeting \#13, Arcadia, CA.} 
+			% November 5-6, 2019
+		\lpdentry
+			{2019}
+			{Decadal Distribution of ET and Drainage Based on SMAP Based Hydrologic Analogues and Historical Precipitation}
+			{SMAP Science Team Meeting}
+			{Entekhabi*, D, R Akbar, \& \textcl{DJ Short Gianotti} (2019) ``Decadal Distribution of ET and Drainage Based on SMAP Based 
+			Hydrologic Analogues and Historical Precipitation,'' SMAP Science Team Meeting \#13, Arcadia, CA.} % November 5-6, 2019
+		\lpdentry
+			{2019}
+			{Seasonal Hydroclimatology of ET and Drainage from 
+			SMAP TB and Precipitation}
+			{SMAP Science Team Meeting}
+			{Akbar, R, \textcl{DJ Short Gianotti}, GD Salvucci, \& D Entekhabi (2019) ``Seasonal Hydroclimatology of ET and Drainage from 
+			SMAP TB and Precipitation,'' SMAP Science Team Meeting \#13, Arcadia, CA.} % November 5-6, 2019
+		\lpdentry
+			{2019}
+			{Satellite-Based Assessment of Surface 
+			Energy Partitioning Soil Moisture Relationships}
+			{SMAP Science Team Meeting}
+			{AF Feldman, \textcl{DJ Short Gianotti}, I Trigo, GD Salvucci, \& D Entekhabi (2019) ``Satellite-Based Assessment of Surface 
+			Energy Partitioning Soil Moisture Relationships,'' SMAP Science Team Meeting \#13, Arcadia, CA.} % November 5-6, 2019
+		\lpdentry
+			{2019}
+			{Estimating Surface Soil Moisture from AMSR2 TB with Artificial Neural Network Method and SMAP Products}
+			{IEEE Geoscience and Remote Sensing Society}
+			{Yao, P*, H Lu, S Yue, F Yang, H Lyu, K Yang, KA McColl, \textcl{DJ Short Gianotti}, \& D Entekhabi (2019) ``Estimating Surface 
+			Soil Moisture from AMSR2 TB with Artificial Neural Network Method and SMAP Products,'' IEEE Geoscience and Remote Sensing 
+			Society: Paper \#2869, Yokohama, Japan.} 
+		\lpdentry
+			{2018}
+			{Hydrologic length scale of L-band radiometric soil moisture retrievals}
+			{American Geophysical Union Fall Meeting}
+			{\textcl{Short Gianotti, DG}*, GD Salvucci, KA McColl, R Akbar, \& D Entekhabi (2018) ``Hydrologic length scale of L-band 
+			radiometric soil moisture retrievals,'' American Geophysical Union Fall Meeting: H42G-02, Washington, DC.}
+		\lpdentry
+			{2018}
+			{Water Exchange Patterns in the Soil-Plant Continuum Based on SMAP Microwave Satellite Measurements}
+			{American Geophysical Union Fall Meeting}
+			{Feldman, AF*, \textcl{DJ Short Gianotti}, AG Konings, KA McColl, R Akbar, GD Salvucci, \& D Entekhabi (2018) ``Water Exchange 
+			Patterns in the Soil-Plant Continuum Based on SMAP Microwave Satellite Measurements,'' American Geophysical Union Fall Meeting: 
+			B53D-06, Washington, DC.}
+		\lpdentry
+			{2018}
+			{Estimating Surface Soil Moisture from AMSR2 TB with Machine Learning Methods and SMAP Products}
+			{American Geophysical Union Fall Meeting}
+			{Lu, H, F Yang, H Lyu, K Yang*, KA McColl, \textcl{DJ Short Gianotti}, \& D Entekhabi (2018) ``Estimating Surface Soil Moisture 
+			from AMSR2 TB with Machine Learning Methods and SMAP Products,'' American Geophysical Union Fall Meeting: H51W-1649, 
+			Washington, DC.}
+		\lpdentry
+			{2018}
+			{Partitioning evapotranspiration over the continental United States using SMAP observations and weather station data}
+			{American Geophysical Union Fall Meeting}
+			{Salvucci, GD*, AJ Rigden, D Entekhabi, \& \textcl{DJ Short Gianotti} (2018) ``Partitioning evapotranspiration over the 
+			continental United States using SMAP observations and weather station data,'' American Geophysical Union Fall Meeting: H41F-01, 
+			Washington, DC.}
+		\lpdentry
+			{2018}
+			{Water Use Efficiency Dependence on Soil 
+			Moisture}
+			{Science Utilization of SMAP Meeting}
+			{\textcl{Short Gianotti, DJ}, GD Salvucci, AJ Rigden, \& D Entekhabi (2018) ``Water Use Efficiency Dependence on Soil 
+			Moisture,'' Science Utilization of SMAP Meeting \#2, Arcadia, CA.} % Nov 28, 2018
+		\lpdentry
+			{2018}
+			{Water Exchange 
+			Patterns in the Soil-Plant Continuum Based on SMAP Microwave Satellite Measurements}
+			{Science Utilization of SMAP Meeting}
+			{Feldman, AF*, \textcl{DJ Short Gianott}, AG Konings, KA McColl, R Akbar, GD Salvucci, \& D Entekhabi (2018) ``Water Exchange 
+			Patterns in the Soil-Plant Continuum Based on SMAP Microwave Satellite Measurements,'' Science Utilization of SMAP Meeting \#2, 
+			Arcadia, CA.} % Nov 28, 2018
+		\lpdentry
+			{2018}
+			{Linkages between water, energy and carbon cycles revealed by SMAP}
+			{SMAP End of Prime Mission Science Meeting}
+			{\textcl{Short Gianotti, DJ}, GD Salvucci, AJ Rigden, \& D Entekhabi* (2018) ``Linkages between water, energy and carbon cycles 
+			revealed by SMAP,'' SMAP End of Prime Mission Science Meeting, Jet Propulsion Laboratory, Pasadena, CA. } % April 18, 2018
+		\lpdentry
+			{2018}
+			{Estimation of ecosystem-scale soil water losses from satellite observations of soil moisture}
+			{SMAP End of Prime Mission Science Meeting}
+			{Akbar, R, \textcl{Short Gianotti, DJ}*, K McColl, E Haghighi, GD Salvucci, \& D Entekhabi (2018) ``Estimation of ecosystem-
+			scale soil water losses from satellite observations of soil moisture,'' SMAP End of Prime Mission Science Meeting, Jet 
+			Propulsion Laboratory, Pasadena, CA. } % April 18, 2018
+		\lpdentry
+			{2017}
+			{Effects of water availability through the coupled 
+			land-atmosphere system}
+			{American Geophysical Union Fall Meeting}
+			{\textcl{Short Gianotti, DJ}*, AJ Rigden, GD Salvucci, \& D Entekhabi (2017) ``Effects of water availability through the coupled 
+			land-atmosphere system,'' American Geophysical Union Fall Meeting: H12G-07, New Orleans, LA.}
+		\lpdentry
+			{2017}
+			{What determines transitions between energy- and moisture-limited evaporative regimes?}
+			{American Geophysical Union Fall Meeting}
+			{Haghighi, E*, \textcl{Short Gianotti, DJ}, R Akbar, GD Salvucci, \& D Entekhabi (2017) ``What determines transitions between 
+			energy- and moisture-limited evaporative regimes?'' American Geophysical Union Fall Meeting: H44C-07, New Orleans, LA.}
+		\lpdentry
+			{2017}
+			{Soil moisture (SMAP) and vapor pressure deficit 
+			controls on evaporation fraction over the Continental U.S.}
+			{American Geophysical Union Fall Meeting}
+			{Salvucci, GD*, AJ Rigden, \textcl{DJ Short Gianotti}, \& D Entekhabi (2017) ``Soil moisture (SMAP) and vapor pressure deficit 
+			controls on evaporation fraction over the Continental U.S.,'' American Geophysical Union Fall Meeting: H12G-01, 
+			New Orleans, LA.}
+		\lpdentry
+			{2017}
+			{Soil moisture controls on water/energy/carbon 
+			coupling}
+			{Science Utilization of SMAP Meeting}
+			{\textcl{Short Gianotti, DJ}*, AJ Rigden, GD Salvucci, \& D Entekhabi (2017) ``Soil moisture controls on water/energy/carbon 
+			coupling,'' Science Utilization of SMAP Meeting, Cambridge, MA.}
+		\lpdentry
+			{2017}
+			{Estimation of ecosystem-scale soil 
+			water losses from satellite observations of soil moisture}
+			{Science Utilization of SMAP Meeting}
+			{Akbar, R*, \textcl{DJ Short Gianotti}, E Haighighi, GD Salvucci, \& D Entekhabi (2017) ``Estimation of ecosystem-scale soil 
+			water losses from satellite observations of soil moisture,'' Science Utilization of SMAP Meeting, Cambridge, MA.} 
+			% October 19, 2017
+		\lpdentry
+			{2017}
+			{The Science Applications of SMAP}
+			{Science Utilization of SMAP Meeting}
+			{Entekhabi, D*, SMAP Science Team, \textcl{DJ Short Gianotti}, Akbar, R, AJ Rigden, GD Salvucci, \& JS Kimball (2017) ``The 
+			Science Applications of SMAP,'' Science Utilization of SMAP Meeting, Cambridge, MA.} % October 19, 2017
+		\lpdentry
+			{2016}
+			{Soil Moisture Controls on Evaporative Fraction}
+			{American Geophysical Union Fall Meeting}
+			{\textcl{Short Gianotti, DJ}*, AJ Rigden, GD Salvucci, \& D Entekhabi (2016) ``Soil Moisture Controls on Evaporative Fraction,'' 
+			American Geophysical Union Fall Meeting: H24C-03, San Francisco, CA.}
+		\lpdentry
+			{2015}
+			{California Drought, Weather Variability, and Climate 
+			Variability}
+			{AGU Chapman Conference on California Drought: Causes, Impacts, and Policy}
+			{\textcl{Short Gianotti, DJ}*, GD Salvucci, \& BT Anderson (2015) ``California Drought, Weather Variability, and Climate 
+			Variability,'' AGU Chapman Conference on California Drought: Causes, Impacts, and Policy, Irvine CA.}
+		\lpdentry
+			{2014}
+			{Characterizing weather and climate variability for 
+			precipitation: A data-based stochastic modeling framework}
+			{American Geophysical Union Fall Meeting}
+			{\textcl{Short Gianotti, DJ}*, BT Anderson, \& GD Salvucci (2014) ``Characterizing weather and climate variability for 
+			precipitation: A data-based stochastic modeling framework,'' American Geophysical Union Fall Meeting, San Francisco CA.}
+		\lpdentry
+			{2014}
+			{Stochastic analysis of California's recent precipitation 
+			drought in the context of the last one hundred years}
+			{American Geophysical Union Fall Meeting}
+			{\textcl{Short Gianotti, DJ}*, BT Anderson, \& GD Salvucci (2014) ``Stochastic analysis of California's recent precipitation 
+			drought in the context of the last one hundred years,'' American Geophysical Union Fall Meeting, San Francisco CA.}
+		\lpdentry
+			{2014}
+			{Integrating satellite and tower 
+			phenology: a case-study in real-time ecological forecasting}
+			{American Geophysical Union Fall Meeting}
+			{Dietze, M*, HE Emery, D Gergel, \textcl{D Gianotti}, JA Mantooth, \& AJ Rigden (2014), ``Integrating satellite and tower 
+			phenology: a case-study in real-time ecological forecasting'' American Geophysical Union Fall Meeting, San Francisco CA.}
+		\lpdentry
+			{2014}
+			{Predicting phenology: A case-study in 
+			real-time ecological forecasting}
+			{Ecological Society of America Annual Meeting}
+			{Dietze, M*, HE Emery, D Gergel, \textcl{D Gianotti}, JA Mantooth, \& AJ Rigden (2014), ``Predicting phenology: A case-study in 
+			real-time ecological forecasting,'' Ecological Society of America Annual Meeting, Sacramento CA.}
+		\lpdentry
+			{2013}
+			{Potential Predictability of Precipitation: Occurrence or 
+			Intensity?}
+			{Climate Diagnostic and Prediction Workshop}
+			{\textcl{Gianotti, DJ}*, BT Anderson, \& GD Salvucci  (2013), ``Potential Predictability of Precipitation: Occurrence or 
+			Intensity?'' 38th Climate Diagnostic and Prediction Workshop, College Park MD.}
+		\lpdentry
+			{2012}
+			{Establishing Potential Predictability of U.S. Precipitation Using 
+			Rain Gauge Data}
+			{Climate Diagnostic and Prediction Workshop}
+			{\textcl{Gianotti, DJ}*, BT Anderson, \& GD Salvucci (2012), ``Establishing Potential Predictability of U.S. Precipitation Using 
+			Rain Gauge Data,'' 37th Climate Diagnostic and Prediction Workshop, Fort Collins CO.}
+		\lpdentry
+			{2012}
+			{Magnitude and significance of observed trends in 
+			precipitation frequency over the U.S.}
+			{Climate Diagnostic and Prediction Workshop}
+			{Pal, I*, BT Anderson, G Salvucci, \& \textcl{D Gianotti}  (2012), ``Magnitude and significance of observed trends in 
+			precipitation frequency over the U.S.,'' 37th Climate Diagnostic and Prediction Workshop, Fort Collins CO.}
+		\lpdentry
+			{2012}
+			{Historical expansion of the summertime monsoon over the 
+			southwestern United States: What can regional models tell us about its causes?}
+			{Regional Spectral Modeling Workshop}
+			{Anderson, BT*, \textcl{D Gianotti}, \& GD Salvucci (2012), ``Historical expansion of the summertime monsoon over the 
+			southwestern United States: What can regional models tell us about its causes?'' Regional Spectral Modeling Workshop, Scripps 
+			Institution of Oceanography, San Diego CA.}
+		\lpdentry
+			{2012}
+			{Magnitude and significance of observed trends in 
+			precipitation frequency over the U}
+			{American Geophysical Union Fall Meeting}
+			{Pal, I*, BT Anderson, G Salvucci, \& \textcl{D Gianotti} (2012), ``Magnitude and significance of observed trends in 
+			precipitation frequency over the US,'' American Geophysical Union Fall Meeting, San Francisco CA.}
+		\lpdentry
+			{2011}
+			{Stochastic and deterministic aspects of observed seasonal-mean 
+			precipitation variations and extreme event occurrences over the United States}
+			{American Geophysical Union Fall Meeting}
+			{\textcl{Gianotti, D}*, BT Anderson, \& G Salvucci (2011), ``Stochastic and deterministic aspects of observed seasonal-mean 
+			precipitation variations and extreme event occurrences over the United States,'' American Geophysical Union Fall Meeting, 
+			San Francisco CA.}
+		\lpdentry
+			{2011}
+			{Detection of historical summertime monsoon precipitation 
+			variations and trends over the southwestern United States}
+			{WCRP Open Science Conference}
+			{Anderson, BT*, \textcl{D Gianotti}, \& GD Salvucci (2011), ``Detection of historical summertime monsoon precipitation 
+			variations and trends over the southwestern United States,'' WCRP Open Science Conference, Denver CO.}
+		\lpdentry
+			{2011}
+			{Detection of historical precipitation variations and trends over the 
+			continental United States}
+			{Department of Energy Principal Investigators Meeting}
+			{Anderson, BT*, D Gianotti, \& GD Salvucci (2011), ``Detection of historical precipitation variations and trends over the 
+			continental United States,'' Department of Energy Principal Investigators Meeting, Washington DC.}
+		\lpdentry
+			{2007}
+			{Upgrades to a  wastewater lagoon treatment system in a rural sub-
+			Arctic community in Alaska}
+			{International Symposium on Cold Region Development}
+			{Schubert, DH*, \textcl{DJ Gianotti}, \& K Sauers (2007), ``Upgrades to a  wastewater lagoon treatment system in a rural sub-
+			Arctic community in Alaska,'' International Symposium on Cold Region Development, Tampere Finland.}
+		\lpdentry
+			{2007}
+			{Application of a Thermal-hydraulic Model to Analyze and Design a 
+			Circulating Water System in Alaska}
+			{International Symposium on Cold Region Development}
+			{Schubert, DH*, \textcl{DJ Gianotti}, \& G Jones (2007), ``Application of a Thermal-hydraulic Model to Analyze and Design a 
+			Circulating Water System in Alaska,'' International Symposium on Cold Region Development, Tampere Finland.}
+		\lpdentry
+			{2005}
+			{Wastewater treatment lagoon design in rural Alaska}
+			{Alaska Water and Wastewater Management Association}
+			{\textcl{Gianotti, DJ}*, C Woolard, \& D White (2005),``Wastewater treatment lagoon design in rural Alaska,'' 45th Alaska Water 
+			and Wastewater Management Association Annual Statewide Conference, Juneau AK.}
+
+	\subsection{Invited Talks, Seminars, and Non-Conference Presentations}
+		\emph{* denotes presenting author}
+		\\ \emph{$\dagger$ denotes student advisee}
+		\\ \emph{$\ddag$ denotes invited talk}\\
+		
+		\lpdentry
+			{2020}
+			{Water limitation and vegetation response}
+			{Arnold Arboretum, Harvard University}
+			{\textcl{Short Gianotti, DJ}*$^\ddag$ (2020) ``Water limitation and vegetation response,'' Arnold Arboretum of Harvard 
+			University Research Talks Series, Arnold Arboretum.} % March 9, 2020
+		\lpdentry
+			{2019}
+			{Water availability controls on vegetated ecosystems}
+			{Massachusetts Institute of Technology}
+			{\textcl{Short Gianotti, DJ}* (2019) ``Water availability controls on vegetated ecosystems,'' Ralph M. Parsons Laboratory 
+			Environmental Science Seminar Series, Massachusetts Institute of Technology.} % April 5, 2019
+		\lpdentry
+			{2019}
+			{Impacts of Soil Moisture on 
+			Ecosystem Carbon and Water Exchanges}
+			{Massachusetts Institute of Technology}
+			{Toft*$^\dagger$, N, N Lutz*$^\dagger$, \textcl{DJ Short Gianotti}, \& D Entekhabi (2019) ``Impacts of Soil Moisture on 
+			Ecosystem Carbon and Water Exchanges,'' Civil \& Environmental Engineering Mini-UROP Presentations, Massachusetts Institute of 
+			Technology.} % Feb 1, 2019
+		\lpdentry
+			{2016}
+			{The Potential Predictability of Precipitation over the Continental United States}
+			{Boston University}
+			{\textcl{Short Gianotti, DJ}* (2016) ``The Potential Predictability of Precipitation over the Continental United States,'' 
+			Dissertation Defense, Boston University.} %Aug 9, 2016
+		\lpdentry
+			{2015}
+			{Weather models for climate variability}
+			{Boston University}
+			{\textcl{Gianotti, DJ}* (2015) ``Weather models for climate variability,'' Dept. of Earth \& Env. Graduate Student 
+			Presentations, Boston University.} %apr 10 2015
+		\lpdentry
+			{2014}
+			{Real weather, fake weather, and the California Drought}
+			{Boston University}
+			{\textcl{Gianotti, DJ}* (2014) ``Real weather, fake weather, and the California Drought,'' Dept. of Earth \& Env. Graduate 
+			Student Presentations, Boston University.} %apr 11 2014
+		\lpdentry
+			{2012}
+			{How predictable is rain?}
+			{Boston University}
+			{\textcl{Gianotti, DJ}* (2012) ``How predictable is rain?'' Dept. of  Geography \& Env. Graduate Student Presentations, Boston 
+			University.}
+		\lpdentry
+			{2012}
+			{Stochastic and deterministic aspects of observed seasonal-mean 
+			precipitation variations and extreme event occurrences over the United States}
+			{Boston University}
+			{\textcl{Gianotti, D}*, BT Anderson, \& G Salvucci (2012), ``Stochastic and deterministic aspects of observed seasonal-mean 
+			precipitation variations and extreme event occurrences over the United States,'' Science and Engineering Research Symposium, 
+			Boston University.}
+
+	\subsection{Non-Refereed Research Documents}
+		\lpdentry
+			{2007}
+			{Upgrades to a  wastewater lagoon treatment system in a 
+			rural sub-Arctic community in Alaska}
+			{International Symposium on Cold Region Development}
+			{Schubert, DH, \textcl{DJ Gianotti}, \& K Sauers (2007), ``Upgrades to a  wastewater lagoon treatment system in a 
+			rural sub-Arctic community in Alaska,'' Proceedings of the 8th International Symposium on Cold Region Development.}
+		\lpdentry
+			{2007}
+			{Application of a Thermal-hydraulic Model to Analyze and 
+			Design a Circulating Water System in Alaska}
+			{International Symposium on Cold Region Development}
+			{Schubert, DH, \textcl{DJ Gianotti}, \& G Jones (2007), ``Application of a Thermal-hydraulic Model to Analyze and 
+			Design a Circulating Water System in Alaska,'' Proceedings of the 8th International Symposium on Cold Region Development.}
+		\lpdentry
+			{2005}
+			{Waste Stabilization Pond Design and Performance 
+			Study}
+			{Alaska Department of Environmental Conservation}
+			{Woolard, C, \textcl{D Gianotti}, K Hardie, D White, \& A Pinto (2005), ``Waste Stabilization Pond Design and Performance 
+			Study,'' Prepared for the Alaska Department of Environmental Conservation.}
+		\lpdentry
+			{2003}
+			{Fluid drop coalescence in a Hele-Shaw cell}
+			{Harvey Mudd College}
+			{\textcl{Gianotti, DJ} (2003), ``Fluid drop coalescence in a Hele-Shaw cell,'' Undergraduate Mathematics Thesis, Advised by A 
+			Nadim, \emph{Harvey Mudd College}.}
+		\lpdentry
+			{2002}
+			{Internal metrology for the Space 
+			Interferometry Mission}
+			{NASA-JPL}
+			{Lampe, K, K Hultman, K Hedstrom, \textcl{D Gianotti}, E Deyo, \& R Seat (2002), ``Internal metrology for the Space 
+			Interferometry Mission,'' Undergraduate Physics Clinic Report, Advised by R Haskell, D MacDonald, \& B Nemati, \emph{Harvey Mudd 
+			College \& NASA-JPL}.}
+
+\section{published software packages}
+	\lpdentry
+		{2016}
+		{Occurrence Markov Chain daily precipitation model}
+		{}
+		{\textcl{Short Gianotti, DJ} (2016) ``Occurrence Markov Chain daily precipitation model,'' \url{http://github.com/dgianotti/OMC-precip, DOI:10.5281/zenodo.45435}.}
+
+\section{appointments held}
+	\dentry
+		{2016-Present}
+		{Postdoctoral Associate} 
+		{Massachusetts Institute of Technology}
+		{}
+	\dentry
+		{2011-2015}
+		{Research Assistant}
+		{Boston University}
+		{}
+	\dentry
+		{2011}
+		{Math Teacher}
+		{Boston Public Schools}
+		{}
+	\dentry
+		{2004-2010}
+		{Tutor}
+		{Private Practice}
+		{}
+	\dentry
+		{2007-2008}
+		{Lab Technician}
+		{California Institute of Technology}
+		{}
+	\dentry
+		{2005-2006}
+		{Environmental Engineering Associate}
+		{GV Jones \& Associates}
+		{}
+	\dentry
+		{2004-2005}
+		{Research Assistant}
+		{University of Alaska, Anchorage}
+		{}
+	\dentry
+		{2003-2005}
+		{Substitute Teacher}
+		{Anchorage School District}
+		{}
+	\dentry
+		{2004}
+		{Staff}
+		{National Youth Science Camp}
+		{}
+	\dentry
+		{2001-2003}
+		{Writing Consultant}
+		{Harvey Mudd College}
+		{}
+	\dentry
+		{2002}
+		{Research Assistant}
+		{Lawrence Berkeley National Lab}
+		{}
+
+\section{teaching}
+\subsection{Teaching Fellow:}
+	\dentry
+		{2015}
+		{\emph{Introduction to Quantitative Environmental Modeling}} 
+		{Boston University}
+		{}
+
+\subsection{Guest Lecturer:}
+	\dentry
+		{2016-2018}
+		{\emph{Introduction to Hydrology and Water Resources}}
+		{Massachusetts Institute of Technology}
+		{}
+	\dentry
+		{2017}
+		{\emph{Introduction to Hydrologic Modeling}}
+		{Massachusetts Institute of Technology}
+		{Massachusetts Institute of Technology}
+		{}
+
+\subsection{K-12 Instruction:}
+	\dentry
+		{2010-2011}
+		{High school mathematics}
+		{Boston Public Schools}
+		{}
+	\dentry
+		{2004-2006}
+		{Substitute Teacher}
+		{Anchorage School District}
+		{All subjects, all ages}
+		
+\subsection{Private Tutoring:}
+	\dentry
+		{2002-2010}
+		{Math, physics, writing through advanced undergraduate}
+		{}{}
+	\dentry
+		{2006-2010}{Chemistry, biology through introductory undergraduate}{}{}
+	\dentry
+		{2006-2010}{All subjects through advanced secondary}{}{}
+%%\subsection*{Subjects taught}
+%%\begin{itemize}
+%%\item Mathematics through Multivariate Calculus and Linear Algebra
+%%\item Physics though Introductory Quantum Mechanics and Theoretical Mechanics
+%%\item Introductory Chemistry and Biology
+%%\item Writing including Creative, Technical, and Persuasive -- focuses on %Language and Structural Design
+%%\end{itemize}
+%
+
+\section{mentorship}
+\subsection{Thesis Committee Member:}
+	\dentry
+		{2018-2019} 
+		{Apisada (Ju) Chulakadabba}
+		{MIT Civil \& Environmental Engineering}
+		{Undergraduate Senior Thesis Title: \emph{Integration of Satellite and In-situ Data for the 
+		Study of Vegetation Responses to Precipitation Pulses in the Southwestern United States } }
+
+\subsection{First-year Mini-UROP:}
+	\dentry
+		{2019} 
+		{Naomi Lutz \& Nicole Toft}
+		{MIT Civil \& Environmental Engineering}
+		{\emph{Impacts of Soil Moisture on Ecosystem Carbon and Water Exchanges} }
+%
+%%\hrule
+\section{professional development}
+	\dentry
+		{2015}
+		{ComSciCon 2015}
+		{Harvard University}
+		{Communicating Science Workshop}
+%
+%%\hrule
+\section{professional service}
+
+\subsection{Non-Journal Reviews}
+	\lpdentry
+		{2018} 
+		{Special Report on Climate Change, Desertification, Land Degradation, Sustainable Land 
+		Management, Food Security, and Greenhouse gas fluxes in Terrestrial Ecosystems}
+		{Intergovernmental Panel on Climate Change}
+		{First Order Draft for US Global Change Research Program}
+
+\subsection{Journal Reviews}
+Bulletin of the American Meteorological Society\\
+Hydrology and Earth System Sciences\\
+Journal of Hydrometeorology\\
+International Journal of Climatology\\
+Remote Sensing of Environment
+
+\subsection{Memberships \& Research Communities}
+American Geophysical Union\\ % 2011-present
+Boston Water Group\\ % 2014-present
+Boston Area Hydrology Journal Club\\ % 2012-present
+Harvard Plants \& Climate
+
+\end{document}
