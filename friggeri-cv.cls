@@ -326,7 +326,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
-
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = {blue!50!black} %Colour for external hyperlinks
+}
 %%%%%%%%%%%%%%
 % Awesome CV %
 %%%%%%%%%%%%%%
