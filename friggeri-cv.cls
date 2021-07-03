@@ -328,6 +328,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \RequirePackage{hyperref}
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
+  linkcolor    = {blue!50!black},
   urlcolor     = {blue!50!black} %Colour for external hyperlinks
 }
 %%%%%%%%%%%%%%
