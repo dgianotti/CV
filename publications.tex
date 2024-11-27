@@ -1,0 +1,25 @@
+%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own
+\makerubrichead{Publications and Talks}
+$\dagger$ denotes student advisee.
+
+$\star$ denotes presenting author.
+
+%% Assuming you've already given \addbibresource{own-bib.bib} in the main doc. Right? Right???
+\nocite{*}
+
+%% If you just want everything in one list
+% \printbibliography[heading={none}]
+
+\printbibliography[heading={subbibliography},title={Manuscripts in Progress},type=article,keyword={in progress}]
+
+\printbibliography[heading={subbibliography},title={Published Journal Articles},type=article,keyword={Published Article}]
+
+\printbibliography[heading={subbibliography},title={Conference Presentations},type=inproceedings,keyword={Conference Presentation}]
+
+\printbibliography[heading={subbibliography},title={Invited Talks, Seminars, and Non-Conference Presentations},keyword={other talks}]
+
+\printbibliography[heading={subbibliography},title={Other Research Documents},keyword={other doc}]
+
+
+
+
