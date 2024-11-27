@@ -97,8 +97,19 @@
 
 \title{Curriculum Vitae}
 
+ 
+
 \begin{document}
 \makeheaders[c]
+
+
+\pagestyle{fancy}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead{} % clear all header fields
+    \fancyfoot{} % clear all footer fields
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[R]{\textsc{CV: Daniel J.\ Short Gianotti}}
+\thispagestyle{empty}
 
 % \makerubric{specialization}
 \makerubric{employment}
@@ -120,4 +131,10 @@
 \makerubric{referee}
 % \input{referee-full}
 
+% Link back at bottom of last page:
+\vfill
+\begin{center}
+Updated \today.
+\par Find the most up-to-date version of this CV {\textcolor{MarkerColour}{\scriptsize\faLink}}\href{https://raw.githubusercontent.com/dgianotti/CV/master/DJSG-CV.pdf}{\textcolor{MarkerColour}{here}}.
+\end{center}
 \end{document}
