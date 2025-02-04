@@ -46,7 +46,7 @@ runs:
         pdf_file=$(find . -type f -name "*.pdf" | head -n 1)
         echo "Found file: $pdf_file"
 
-        git add resume.tex "$pdf_file"
+        git add DJSG-CV.tex "$pdf_file"
         git commit -m "Resume updated"
         git push
 
