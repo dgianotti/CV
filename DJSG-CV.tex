@@ -6,6 +6,7 @@
 % Default biblatex style used for the publication list is APA6. If you wish to use a different style or pass other options to biblatex you can change them here. 
 \PassOptionsToPackage{style=ieee,backend=biber,sorting=none,uniquename=init,defernumbers=true,maxbibnames=99}{biblatex}
 
+
 % Most commands and style definitions are in settings.sty.
 \usepackage{settings}
 
@@ -20,13 +21,16 @@
     {\textbf{#1}}
     {#1}%
   \ifitemannotation{presenter}
-    {\textsuperscript{$\star$}}
+    {\raise0.5ex\hbox{$\star$}}
+    %{\textsuperscript{$\star$}}
     {}%
   \ifitemannotation{advisee}
-    {\kern-0.05em\textsuperscript{$\dagger$}}
+	{\kern-0.05em\raise0.5ex\hbox{\smaller{$\dagger$}}}
+    %{\kern-0.05em\textsuperscript{$\dagger$}}
     {}%
   \ifitemannotation{last}
-    {\textsuperscript{$\ddagger$}}
+    {\raise0.5ex\hbox{\smaller{$\ddagger$}}}
+    %{\textsuperscript{$\ddagger$}}
     {}%
 }
 
@@ -40,7 +44,7 @@
   Lim/Tracy,
   Lim/L.\bibnamedelimi T.}
 %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
-
+ 
 % Change the fonts if you want
 \ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
   \usepackage{fontspec} 
@@ -91,13 +95,11 @@
 
 \rightheader{~}
 \begin{fullonly}
-\photo[r]{HS2.png}
-\photoscale{0.13}
+	\photo[r]{HS2.png}
+	\photoscale{0.13}
 \end{fullonly}
 
 \title{Curriculum Vitae}
-
- 
 
 \begin{document}
 \makeheaders[c]
